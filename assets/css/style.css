@@ -1,0 +1,426 @@
+/* Global-CSS */
+@font-face {
+    font-family: 'Proxima Nova Alt Rg';
+    src: url('../font/ProximaNovaA-Regular.eot');
+    src: url('../font/ProximaNovaA-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/ProximaNovaA-Regular.woff2') format('woff2'),
+        url('../font/ProximaNovaA-Regular.woff') format('woff'),
+        url('../font/ProximaNovaA-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Th';
+    src: url('../font/ProximaNovaT-Thin.eot');
+    src: url('../font/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../font/ProximaNovaT-Thin.woff2') format('woff2'),
+        url('../font/ProximaNovaT-Thin.woff') format('woff'),
+        url('../font/ProximaNovaT-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Alt Bl';
+    src: url('../font/ProximaNovaA-Black.eot');
+    src: url('../font/ProximaNovaA-Black.eot?#iefix') format('embedded-opentype'),
+        url('../font/ProximaNovaA-Black.woff2') format('woff2'),
+        url('../font/ProximaNovaA-Black.woff') format('woff'),
+        url('../font/ProximaNovaA-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Alt Rg';
+    src: url('../font/ProximaNovaA-Bold.eot');
+    src: url('../font/ProximaNovaA-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/ProximaNovaA-Bold.woff2') format('woff2'),
+        url('../font/ProximaNovaA-Bold.woff') format('woff'),
+        url('../font/ProximaNovaA-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+a:hover {
+    text-decoration: none;
+}
+.grey-bg {
+    background-color: #f9f7f3;
+}
+
+.theme-heading {
+    font-size: 22px;
+    letter-spacing: 3px;
+    line-height: 2.5;
+    color: #000000;
+    font-family: "Bebas Neue";
+    margin: 0;
+}
+.theme-heading-sm {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #000000;
+    font-family: "Bebas Neue";
+    text-align: center;
+    margin: 0;
+}
+.theme-desc {
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 2;
+    color: #000000;
+    font-weight: 300;
+    font-family: 'Proxima Nova Alt Rg';
+    margin: 0;
+}
+
+/* toggle-button-css */
+.navbar-toggler {
+    width: 24px;
+    height: 30px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    float: right;
+}
+
+.navbar-toggler-icon, .navbar-toggler-icon:before, .navbar-toggler-icon:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5px;
+    right: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.3s cubic-bezier(0.600, 0.000, 0.200, 1.000), margin 0.3s ease 0.3s, transform 0.3s ease, background 0.05s ease 0.27s;
+    -moz-transition: all 0.3s cubic-bezier(0.600, 0.000, 0.200, 1.000), margin 0.3s ease 0.3s, transform 0.3s ease, background 0.05s ease 0.27s;
+    -o-transition: all 0.3s cubic-bezier(0.600, 0.000, 0.200, 1.000), margin 0.3s ease 0.3s, transform 0.3s ease, background 0.05s ease 0.27s;
+    transition: all 0.3s cubic-bezier(0.600, 0.000, 0.200, 1.000), margin 0.3s ease 0.3s, transform 0.3s ease, background 0.05s ease 0.27s;
+    -webkit-transition-timing-function: cubic-bezier(0.600, 0.000, 0.200, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.600, 0.000, 0.200, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.600, 0.000, 0.200, 1.000);
+    transition-timing-function: cubic-bezier(0.600, 0.000, 0.200, 1.000);
+}
+
+.navbar-toggler-icon:before {
+    margin-top: -7px;
+    top: 0;
+    width: 80%;
+}
+
+.navbar-toggler-icon:after {
+    margin-top: 7px;
+    top: 0;
+    width: 50%;
+}
+
+/* button-css */
+.load-more-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.load-more-wrap .load-button {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 18px;
+    color: #000000;
+    font-family: 'Proxima Nova Alt Rg';
+    text-transform: uppercase;
+    background: no-repeat;
+    border: none;
+    padding: 0;
+}
+ 
+.load-button span {
+    transition: all 1s;
+    opacity: 1;
+}
+.load-button svg {
+    display: none;
+    margin: 0 auto;
+    transition: all 1s;
+}
+.load-button svg path, button.load-button svg rect {
+    fill: #000;
+}
+
+.loading-start span {
+    display: none;
+    opacity: 0;
+}
+.loading-start svg {
+    display: block;
+    opacity: 1;
+}
+
+.btn-content {
+    float: left;
+    margin: 0 20px;
+}
+
+
+/* Header-CSS */
+.site-header .navbar-brand {
+    font-size: 55px;
+    letter-spacing: 4px;
+    color: #000000;
+    font-family: "Bebas Neue";
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.navbar-brand-wrap {
+    text-align: center;
+    padding: 30px 0;
+}
+.site-header .navbar-nav {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.site-header .navbar {
+    padding: 0;
+}
+.site-header .nav-link {
+    font-size: 17px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Bebas Neue";
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 0;
+}
+
+.site-banner {
+    padding: 30px 0;
+}
+.banner-desc {
+    padding: 30px 0;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Proxima Nova Alt Rg';
+}
+
+.about-client-section {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.about-wrap, .client-wrap {
+    padding: 0 60px;
+}
+
+.about-wrap {
+    margin-bottom: 60px;
+}
+
+.img-section {
+    padding: 30px 0;
+}
+.content-sec {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 15px 0;
+    min-height: 90px;
+}
+.img-name {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #000000;
+    font-family: 'Proxima Nova Alt Rg';
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.img-grid-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.img-grid-section ul li {
+    display: flex;
+    padding: 0 10px;
+    margin-bottom: 30px;    
+    justify-content: space-between;
+}
+.img-grid-section .img-content {
+    margin: 0 5px;
+}
+
+#special_features {
+    padding: 30px 0;
+}
+#special_features .theme-heading {
+    padding: 30px 0px;
+}
+
+/* footer-CSS */
+.footer-content {
+    padding: 60px 0;
+    width: 100%;
+}
+
+.footer-content ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-content ul li a {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #000000;
+    font-family: 'Proxima Nova Alt Rg';
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.footer-content ul li {
+    padding: 0 20px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e7e6e2;
+    padding: 30px 0;
+}
+
+.footer-bottom ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-bottom ul li {
+    padding: 0 .5rem;
+    margin: 0 30px;
+}
+
+.footer-bottom ul li a {
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: #000000;
+    font-family: "Bebas Neue";
+    text-align: center;
+}
+
+.footer-bottom ul li a:hover {
+    text-decoration: none;
+}
+
+@media(max-width: 991px){
+    .site-banner {
+        padding: 0;
+    }
+    .navbar-brand-wrap {
+        text-align: center;
+    }
+    .site-header .navbar-brand {
+        font-size: 35px;
+        text-align: left;
+    }
+    .site-header .navbar-toggler {
+        position: absolute;
+        top: -64px;
+        right: 0;
+    }
+    .site-header .navbar-nav {
+        align-items: flex-start;
+        padding-bottom: 30px;
+    }
+    .site-header .nav-item {
+        padding: 5px 0;
+    }
+    .site-header .nav-link {
+        margin: 0px;
+    }
+
+}
+
+@media(max-width: 767px){
+
+    .banner-desc {
+        padding: 15px 0;
+    }
+    .banner-desc br {
+        display: none;
+    }
+    .about-wrap, .client-wrap {
+        padding: 0 15px;
+    }
+    .img-sec img {
+        width: 100%;
+    }
+    .img-content {
+        text-align: center;
+    }
+    .img-grid-section ul {
+        width: 100%;
+    }
+    .img-grid-section ul li {
+        display: block;
+        margin: 0;
+    }
+    #special_features .theme-heading {
+        text-align: center;
+    }
+    .footer-content {
+        padding: 30px 0;
+    }
+    .footer-content ul {
+        display: block;
+        text-align: center;
+    }
+    .footer-content ul li {
+        padding: 10px 0;
+    }
+    .footer-bottom ul {
+        display: block;
+        text-align: center;
+    }
+}
